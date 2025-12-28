@@ -1,0 +1,126 @@
+*Class & Object:~
+
+        class is a blueprint for creating object
+
+        #creating class
+
+        class Student:
+            name = "Parth"
+
+        #creating object(instance)
+
+        s1 = Student()
+        print(s1.name)
+
+
+Constructor:~
+
+        All classes have a function called _init_(),which is always executed when the object is being initiated.
+
+        #creating class
+
+        class Student:
+            def __init__(self,fullname):
+                self.name=fullname
+
+        #creating object
+
+        s1=Student("parth")
+        print(s1.name)
+
+        here 'the self parameter is a reference to the currene=t instance of class, and is used to access variables that belongs to the class.'
+
+
+Methods:~
+
+        methods are function that belong to object
+
+        #creating Class
+
+        class Student:
+            def __init__(self,fullname):
+                self.name=fullname
+
+            def hello(self):
+                print("hello",self.name)
+
+        #creating object
+
+        s1=Student("parth")
+        s1.hello()
+
+Static Method:~
+
+        methods that don't use the self parrmeter (work at class level)
+
+        class Student:
+            @Staticmethod   #decorator
+
+            def college():
+                print("ABC college")
+
+
+        *decorator allow us to wrap another function in order to extend the behaviour of the wrapped function,without permanently modifying initiated*
+
+Important:~
+        *Abstraction:
+            hiding the implementation details of a class and onluy showing the essential features to the user.
+        *Encapsulation:
+            wrapping data and function into a single unit(object)
+        *Inheritance:
+        *Polymorphism:
+
+del Keyword:~
+        used to delete object properties or object itself
+
+        del s1.name
+        del s1
+
+private(like) atrributes & methods:~
+
+        conceptual implementation in pythod
+            private atrributes & methods are ment to be used only within the class and are not 
+            accessible from outside the class.
+
+Inheritance:~
+        when one class(child/detived) derives the properties & methods of another class(parent/base).
+
+        class car:
+            .......
+            .......
+
+        class Toyotacar(car):
+            .......
+
+        *types:~
+            ~>single Inheritance
+            ~>Multi-level Inheritance
+            ~>Multiple Inheritance
+
+*super method:~
+
+        super() method is used to access methods pf the parent class
+
+class method:~
+
+        A class method us bound to the class & receives the class as an implicit first argument
+
+        note:-static method can't access or modify class state & generally for utility.
+
+        class Student:
+        @classmethod #decorator
+
+        def college(cls):
+            pass    
+
+Polymorphism :operator overloading:~
+
+        when the same operator is allowed to have different meaning according to the context
+
+        operator&Dunder function:-
+
+        a + b #add              a.__add__(b) 
+        a - b #sub              a.__sub__(b) 
+        a * b #mul              a.__mul____(b) 
+        a / b #division         a.__truediv____(b) 
+        a % b #modulo           a.__mod____(b) 
