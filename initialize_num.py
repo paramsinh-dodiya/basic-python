@@ -1,0 +1,6 @@
+import numpy as np
+n1=np.full((3,3),5)
+print(n1)
+print()
+
+print(type(n1))
